@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "NanumGothic";
+}
+
+@font-face {
+    font-family: "UbuntuRegular";
+    src: url(assets/fonts/UbuntuRegular.ttf);
+    font-family: "NanumGothic";
+    src: url(assets/fonts/NanumGothic.ttf);
+    font-family: "SourceCodePro-Regular";
+    src: url(assets/fonts/SourceCodePro-Regular.ttf);
+}
+
+.portfolio {
+    border: 2px solid black;
+    font-size: 14pt;
+}
+
+/*_______NAV__________________*/
+
+.navigation {
+    width: 25%;
+    height: 100vh;
+    padding: 2% 0;
+    position: fixed;
+    /* display: flex;
+    flex-direction: column; */
+    border: 2px solid green;
+}
+
+.navigation>div, nav {
+    margin: 0 15%;
+}
+
+/*_1_part_*/
+
+.navigation_logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 50pt;
+    font-family: "NanumGothic";
+}
+
+.navigation_logo {
+    padding: 0 20%;
+}
+
+.navigation_logo_Y {
+    align-self: flex-end;
+}
+
+/*_2_part_*/
+
+.navigation_bar {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-top: 15%;
+    margin-bottom: 30%;
+}
+
+.navigation_bar>div {
+    font-size: 20pt;
+    margin: 2% 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5% 5%;
+    background: linear-gradient(30deg, rgba(3, 55, 226, 0.1), rgba(110, 233, 10, 0.5), rgb(238, 224, 145))
+}
+
+.navigation_bar>div:hover {
+    border-radius: 10px;
+    justify-content: center;
+    color: #fff;
+}
+
+.navigation_bar>div>a {
+    color: teal;
+    text-decoration: none;
+}
+
+/*_3_part_*/
+
+.navigation_social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation_social img {
+    height: 30px;
+    width: 30px;
+}
+
+/*_______INFORM__________________*/
+
+.information {
+    margin-left: 25%;
+    width: 75%;
+    border: 2px solid orchid;
+}
+
+/*_______HEADER__________________*/
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url(/assets/header/main_second.jpg);
+    /*no-repeat*/
+    background-size: cover;
+    background-position: center;
+    border: 2px solid gold;
+}
+
+/*____header-nav_____*/
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 3%;
+    visibility: hidden;
+    background-color: rgb(191, 219, 241);
+    border: 1px solid black;
+}
+.dropdown-menu{
+    margin-right: 200px;
+    background-color: hotpink;
+}
+/*_____header_inform_______*/
+
+.header_inform {
+    align-self: flex-end;
+    margin-right: 15%;
+    /* justify-self: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25pt;
+    font-weight: bolder;
+    color: white;
+}
+
+.header_inform_photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.header_btn {
+    align-self: center;
+    margin-bottom: 48px;
+    border: 1px solid yellowgreen;
+    background-color: darkgreen;
+    opacity: 0.50;
+    /*animation*/
+    animation-name: arrow_down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+img[alt="arrow_down"] {
+    height: 70px;
+    width: 80px;
+}
+
+@keyframes arrow_down {
+    to {
+        transform: translateY(45px);
+    }
+}
+
+/*_______CONTENT__________________*/
+
+.content {
+    border: 2px solid palevioletred;
+}
+
+/*_______ABOUT_ME_______*/
+
+.aboutme {
+    border: 2px solid black;
+}
+
+.aboutme_title {
+    font-size: 25pt;
+    margin: 15% 5% 7%;
+    border: 2px solid rgb(1, 178, 190);
+}
+
+.aboutme_inform_animation_text::after {
+    color: green;
+    font-weight: bold;
+    content: "Student";
+    animation-name: text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text {
+    from {}
+    to {
+        content: "Front-end development";
+    }
+}
+
+.aboutme_inform {
+    display: flex;
+    margin: 0 5%;
+}
+
+.aboutme_inform_biography {
+    margin-left: 10%;
+}
+
+.aboutme_inform_biography>div:first-child {
+    font-size: 20px;
+    margin-bottom: 3%;
+}
+
+.aboutme_inform_biography:last-child {
+    text-align: justify;
+}
+
+.aboutme_inform_biography_table {
+    margin-top: 3%;
+    display: grid;
+    grid-gap: 20% 20%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.aboutme_inform_biography_table>div:not(.study):not(.interests) {
+    display: flex;
+    align-items: center;
+}
+
+.study, .interests {
+    display: flex;
+    flex-direction: column;
+}
+
+.answer {
+    margin-left: 2%;
+}
+
+.aboutme_inform_biography_table div.icons_descript {
+    display: flex;
+    align-items: center;
+    background-color: slategray;
+}
+
+.aboutme_inform_img img {
+    width: 280px;
+}
+
+.aboutme_inform_biography_table>div img {
+    width: 20px;
+    margin-right: 5%;
+}
+
+.aboutme_inform_btn {
+    width: 90%;
+    margin: 10% auto;
+    padding: 10px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(4, 160, 4);
+    border-radius: 8px;
+    font-size: 18pt;
+    font-weight: bold;
+    color: rgb(4, 160, 4);
+    background: linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(110, 233, 10, 0.5));
+    transition: .2s ease-in-out;
+}
+
+.aboutme_inform_btn:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -6px;
+    transform: skewX(-45deg);
+}
+
+.aboutme_inform_btn:hover {
+    background: rgb(4, 160, 4);
+    color: #fff;
+}
+
+.aboutme_inform_btn:hover:before {
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes btn {
+    to {
+        left: 100%;
+    }
+}
+
+/*_________SKILLS_________________________*/
+
+.skills {
+    height: 90vh;
+    margin: 0 5%;
+    border: 1px solid;
+}
+
+.skills_block_title {
+    font-size: 25pt;
+    margin: 15% 0% 7%;
+    border: 2px solid rgb(1, 178, 190);
+}
+
+.skills_titles {
+    font-size: 18pt;
+    font-weight: bold;
+    color: rgb(2, 112, 112);
+    background: linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(110, 233, 10, 0.5));
+}
+
+.skills_all {
+    border: 1px solid green;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    text-align: center;
+}
+
+.skills_technical>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3% 0;
+    border-right: 2px solid;
+}
+
+.skills_additional>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3% auto;
+}
+
+.skills_technical div.progress {
+    width: 90%;
+}
+
+.skills_additional div.progress {
+    margin: 0 auto;
+    width: 90%;
+}
+
+/*______MY Works___________*/
+
+.myworks {
+    height: 220vh;
+    margin: 0 5%;
+    border: 1px solid;
+}
+
+.myworks_title {
+    font-size: 25pt;
+    margin: 15% 0% 7%;
+    border: 2px solid rgb(1, 178, 190);
+}
+
+.myworks_set {
+    display: grid;
+    grid-gap: 7% 5%;
+    grid-template-columns: repeat(2, 2fr);
+    justify-items: center;
+    text-align: center;
+}
+
+.myworks_block {
+    padding: 1%;
+    border: 5px dotted rgb(1, 178, 190);
+}
+
+.myworks_block:hover {
+    width: 100%;
+    height: auto;
+    border: 4px dotted rgb(4, 160, 4);
+}
+
+.myworks_block>img {
+    width: 350px;
+}
+
+.myworks_block>img:hover {
+    width: 100%;
+}
+
+.myworks_block>div {
+    font-weight: bold;
+    width: 80%;
+    margin: 10% auto;
+    padding: 10px 30px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(4, 160, 4);
+    border-radius: 8px;
+    background: linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(110, 233, 10, 0.5));
+    color: rgb(4, 160, 4);
+    transition: .2s ease-in-out;
+}
+
+.myworks_block>div:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+
+.myworks_block>div:hover {
+    background: rgb(4, 160, 4);
+    color: #fff;
+}
+
+.myworks_block>div:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+/*CONTACT*/
+
+.contact {
+    margin: 0 5%;
+    border: 2px solid hotpink;
+    height: 100vh;
+}
+
+/*_______FOOTER_______________________*/
+
+.footer {
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18pt;
+    align-items: center;
+    color: white;
+    background: linear-gradient(50deg, rgb(29, 90, 29), rgb(53, 97, 23));
+}
+
+.footer>div:first-child {
+    margin-left: 5%;
+}
+
+.footer>div:last-child {
+    margin-right: 5%;
+}
+
+.footer>div>a>img {
+    transform: rotate(180deg);
+    width: 70px;
+    opacity: 0.50;
+}
+
+/*________________________*/
+
+@media screen and (max-width: 1100px) {
+    .navigation {
+        display: none;
+        /* overflow: hidden; */
+        background-color: brown;
+    }
+    .information {
+        margin: 0;
+        width: 100%;
+    }
+    /*_______HEADER__________________*/
+    /*____header-nav_____*/
+    .header_nav {
+        visibility: visible;
+    }
+    /*_______CONTENT__________________*/
+    /*_______ABOUT_ME_______*/
+    .aboutme {
+        height: auto;
+    }
+    .aboutme_inform {
+        flex-direction: column;
+    }
+    .aboutme_inform_img {
+        margin: 0 auto;
+        background-color: springgreen;
+    }
+    .aboutme_inform_biography {
+        margin: 2% 0;
+    }
+    .aboutme_inform_btn {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    /*____MY Works________*/
+    .myworks {
+        height: auto;
+    }
+    .myworks_set {
+        background-color: rgb(233, 233, 140);
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 690px) {
+    /*for all blocks*/
+    .skills, .myworks {
+        margin: 0;
+    }
+    /*_______ABOUT_ME_______*/
+    .aboutme_inform_biography_table {
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutme_inform_biography_table>div:not(.birthday):not(.phone) {
+        margin: 2% 0;
+    }
+    .study, .interests {
+        flex-direction: row;
+    }
+    .study>div.icons_descript>img, .interests>div.icons_descript>img {
+        margin-right: 20px;
+    }
+    /*_________SKILLS_________________________*/
+    .skills {
+        height: auto;
+    }
+    .skills_all {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skills_technical div {
+        border: 0;
+    }
+}
